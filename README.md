@@ -25,14 +25,14 @@ This project is submitted as part of Task - 1 for the internship with CodTech. I
 ## How to Run
 1. Python script :
 
--import requests
--import pandas as pd
--import seaborn as sns
--import matplotlib.pyplot as plt
--API_KEY = "                "
--cities = ["London", "New York", "Tokyo", "Paris", "Mumbai"]
--weather_data = []
--for city in cities:
+- import requests
+- import pandas as pd
+- import seaborn as sns
+- import matplotlib.pyplot as plt
+- API_KEY = "                "
+- cities = ["London", "New York", "Tokyo", "Paris", "Mumbai"]
+- weather_data = []
+- for city in cities:
 -    url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric"
 -    response = requests.get(url)
 -    if response.status_code == 200:
@@ -45,18 +45,17 @@ This project is submitted as part of Task - 1 for the internship with CodTech. I
 -        })
 -    else:
 -        print(f"Failed to get data for {city}")
--df = pd.DataFrame(weather_data)
--print(df)
--plt.figure(figsize=(10, 6))
--sns.barplot(x="City", y="Temperature (°C)", data=df)
--plt.title("City-wise Temperature")
--plt.figure(figsize=(10, 6))
--sns.barplot(x="City", y="Humidity (%)", data=df)
--plt.title("City-wise Humidity")
--plt.show()
+- df = pd.DataFrame(weather_data)
+- print(df)
+- plt.figure(figsize=(10, 6))
+- sns.barplot(x="City", y="Temperature (°C)", data=df)
+- plt.title("City-wise Temperature")
+- plt.figure(figsize=(10, 6))
+- sns.barplot(x="City", y="Humidity (%)", data=df)
+- plt.title("City-wise Humidity")
+- plt.show()
 
-2. Install the required libraries: (in command prompt)
-    pip install requests pandas matplotlib seaborn
+2. Install the required libraries: (in command prompt) --> pip install requests pandas matplotlib seaborn
     
 3. Get your free API key from [OpenWeatherMap](https://openweathermap.org/api)
 
@@ -78,4 +77,4 @@ This project is submitted as part of Task - 1 for the internship with CodTech. I
 
 ## Author
 Sowparnika S 
-Intern at CodTech
+(Intern at CodTech)
