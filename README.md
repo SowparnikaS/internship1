@@ -29,13 +29,9 @@ import requests
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-# Replace with your API key
 API_KEY = "                "
-# List of cities
 cities = ["London", "New York", "Tokyo", "Paris", "Mumbai"]
-# Data storage
 weather_data = []
-# Fetch data for each city
 for city in cities:
     url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric"
     response = requests.get(url)
@@ -49,11 +45,8 @@ for city in cities:
         })
     else:
         print(f"Failed to get data for {city}")
-# Create DataFrame
 df = pd.DataFrame(weather_data)
-# Show DataFrame
 print(df)
-# Plot Temperature and Humidity
 plt.figure(figsize=(10, 6))
 sns.barplot(x="City", y="Temperature (°C)", data=df)
 plt.title("City-wise Temperature")
